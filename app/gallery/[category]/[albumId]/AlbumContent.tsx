@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 import Link from 'next/link'
@@ -232,7 +231,7 @@ export default function AlbumContent({ albumData, category }: AlbumContentProps)
                     e.stopPropagation();
                     handlePrevious();
                   }}
-                  className="text-white hover:text-gray-300 transition-colors p-2"
+                  className="hidden md:block text-white hover:text-gray-300 transition-colors p-2"
                 >
                   <ChevronLeft size={40} />
                 </button>
@@ -276,7 +275,7 @@ export default function AlbumContent({ albumData, category }: AlbumContentProps)
                     e.stopPropagation();
                     handleNext();
                   }}
-                  className="text-white hover:text-gray-300 transition-colors p-2"
+                  className="hidden md:block text-white hover:text-gray-300 transition-colors p-2"
                 >
                   <ChevronRight size={40} />
                 </button>

@@ -1,6 +1,6 @@
 import galleryConfig from '../config/gallery.json'
 import homeConfig from '../config/home.json'
-import type { GalleryConfig, Category, Album, Photo, HomeConfig } from '../types/config'
+import type { GalleryConfig, Category, Album, HomeConfig } from '../types/config'
 
 const config = galleryConfig as GalleryConfig
 const home = homeConfig as HomeConfig

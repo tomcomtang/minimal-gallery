@@ -1,6 +1,7 @@
 export interface Category {
   title: string
   description: string
+  detail?: string
   albums: Album[]
 }
 
@@ -8,9 +9,10 @@ export interface Album {
   id: string
   title: string
   description: string
+  detail?: string
+  coverImage: string
   photoCount: number
   createdAt: string
-  coverImage: string
   photos: Photo[]
 }
 

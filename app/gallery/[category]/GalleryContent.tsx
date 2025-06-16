@@ -11,6 +11,7 @@ import TwoEqualRow from '@/app/components/gallery/TwoEqualRow'
 import TwoUnequalRow from '@/app/components/gallery/TwoUnequalRow'
 import { getAlbumsByCategory } from '@/app/utils/config'
 import { Album } from '@/app/types/config'
+import Link from 'next/link'
 
 const cormorant = Cormorant({
   subsets: ['latin'],
@@ -252,20 +253,26 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
                       duration: 0.6,
                       delay: 0.8 
                     }}
-                    className="flex flex-col h-full w-full"
+                    className="flex flex-col h-full w-full min-w-[280px] md:w-auto md:min-w-0"
                   >
-                    {/* Album name */}
-                    <h2 className="text-3xl font-medium mb-4 text-gray-900">
-                      {currentGalleryInfo.title}
-                    </h2>
-                    
-                    {/* Album description */}
-                    <p className="text-gray-600 mb-8 flex-grow">
-                      {currentGalleryInfo.description}
-                    </p>
-
+                    <div className="flex-1 overflow-y-auto mb-4 md:mb-0">
+                      {/* Album name */}
+                      <h2 className="text-3xl font-medium mb-4 text-gray-900">
+                        {selectedAlbum?.title}
+                      </h2>
+                      {/* Album description */}
+                      <p className="text-gray-600 mb-6">
+                        {selectedAlbum?.description}
+                      </p>
+                      {/* Album detail */}
+                      {selectedAlbum?.detail && (
+                        <p className="text-gray-600 mb-6">
+                          {selectedAlbum.detail}
+                        </p>
+                      )}
+                    </div>
                     {/* Button group */}
-                    <div className="space-y-4 w-full">
+                    <div className="space-y-4 w-[90%]">
                       <button 
                         className="w-full py-2 px-4 bg-amber-100/80 text-gray-800 rounded-lg hover:bg-amber-100 transition-colors"
                         onClick={() => window.location.href = `/gallery/${category}/${selectedAlbum.id}`}
@@ -273,14 +280,14 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
                         View Gallery Details
                       </button>
                       
-                      <button 
+                      <button
                         className="w-full py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                         onClick={handleNextGallery}
                       >
                         Next Gallery
                       </button>
 
-                      <button 
+                      <button
                         className="w-full py-2 px-4 text-gray-500 hover:text-gray-700 transition-colors"
                         onClick={handleClose}
                       >
