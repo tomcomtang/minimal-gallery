@@ -2,12 +2,14 @@
   "categories": {
     "nature": {
       "title": "Nature",
-      "description": "Exploring the magnificent landscapes of nature, from mountains to oceans, from sunrise to sunset",
+      "description": "Exploring Earth's magnificent landscapes from mountains to oceans.",
+      "detail": "A journey through Earth's most stunning natural landscapes.",
       "albums": [
         {
           "id": "nature-1",
           "title": "Mountain Majesty",
-          "description": "Recording the magnificent scenery of majestic mountains",
+          "description": "Capturing the majestic beauty of mountain landscapes.",
+          "detail": "Capturing the raw power and beauty of mountain landscapes.",
           "coverImage": "/images/gallery/nature/nature_1.jpg",
           "photoCount": 4,
           "createdAt": "2024-03-15",
@@ -415,13 +417,15 @@
       ]
     },
     "urban": {
-      "title": "Urban Life",
-      "description": "Capturing the prosperity and vitality of cities, recording the wonderful moments of urban life",
+      "title": "Urban",
+      "description": "Capturing the vibrant life of modern cities.",
+      "detail": "Exploring the dynamic energy of modern city life.",
       "albums": [
         {
           "id": "urban-1",
           "title": "City Skylines",
-          "description": "Showcasing the magnificent skylines of modern cities",
+          "description": "Showcasing iconic city skylines worldwide.",
+          "detail": "Showcasing the iconic silhouettes of world cities.",
           "coverImage": "/images/gallery/urban/urban_1.jpg",
           "photoCount": 4,
           "createdAt": "2024-03-15",
@@ -829,13 +833,15 @@
       ]
     },
     "travel": {
-      "title": "Travel Memories",
-      "description": "Recording wonderful moments during journeys, sharing unique landscapes from around the world",
+      "title": "Travel",
+      "description": "Documenting journeys and adventures worldwide.",
+      "detail": "A visual journey through fascinating destinations worldwide.",
       "albums": [
         {
           "id": "travel-1",
-          "title": "European Journey",
-          "description": "Exploring the charm of European cities",
+          "title": "World Heritage",
+          "description": "Exploring UNESCO World Heritage sites globally.",
+          "detail": "Discovering the world's most significant cultural treasures.",
           "coverImage": "/images/gallery/travel/travel_1.jpg",
           "photoCount": 4,
           "createdAt": "2024-03-15",
@@ -1243,15 +1249,17 @@
       ]
     },
     "architecture": {
-      "title": "Architectural Art",
-      "description": "Showcasing the unique charm of architecture, from classical to modern, from East to West",
+      "title": "Architecture",
+      "description": "Showcasing the art of modern building design.",
+      "detail": "Celebrating the artistry of modern architectural design.",
       "albums": [
         {
           "id": "architecture-1",
-          "title": "Modern Architecture",
-          "description": "Showcasing the innovative design of modern architecture",
+          "title": "Modern Marvels",
+          "description": "Showcasing contemporary architectural masterpieces.",
+          "detail": "Exploring cutting-edge innovations in architectural design.",
           "coverImage": "/images/gallery/architecture/architecture_1.jpg",
-          "photoCount": 20,
+          "photoCount": 4,
           "createdAt": "2024-03-15",
           "photos": [
             {

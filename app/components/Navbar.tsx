@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { useRef } from 'react'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -11,6 +12,14 @@ const navItems = [
 ]
 
 export default function Navbar() {
+  const mobileMenuRef = useRef<HTMLInputElement>(null)
+
+  const handleMobileMenuClick = () => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.checked = false
+    }
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
@@ -50,7 +59,12 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Checkbox (hidden) */}
-        <input type="checkbox" id="mobile-menu" className="hidden peer" />
+        <input 
+          type="checkbox" 
+          id="mobile-menu" 
+          className="hidden peer" 
+          ref={mobileMenuRef}
+        />
 
         {/* Mobile Menu */}
         <div className="md:hidden absolute left-0 right-0 bg-white shadow-lg transform transition-all duration-300 ease-in-out max-h-0 peer-checked:max-h-96 overflow-hidden">
@@ -60,6 +74,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className="block text-gray-600 hover:text-gray-900 transition-colors"
+                onClick={handleMobileMenuClick}
               >
                 {item.name}
               </Link>

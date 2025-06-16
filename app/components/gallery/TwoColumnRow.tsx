@@ -7,6 +7,7 @@ interface TwoColumnRowProps {
   info?: {
     title: string
     description: string
+    detail?: string
   }
   hideFirstPhotoLabels?: boolean
 }
@@ -55,7 +56,7 @@ export default function TwoColumnRow({ albums, onAlbumClick, info, hideFirstPhot
                     {info.description}
                   </p>
                   <p className="text-base text-gray-600 max-w-2xl italic">
-                    Photography has been my passion for over a decade. Through this gallery, I hope to share not just images, but the emotions and stories behind them. Every shot is a window into a moment that moved me, and I'm excited to share these moments with you.
+                    { info.detail}
                   </p>
                 </div>
               </>
