@@ -22,8 +22,8 @@ export default function Home() {
           {/* 主要内容区域 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
             {/* 移动端图片展示区域 */}
-            <div className="md:hidden relative h-[500px] flex items-center justify-center">
-              <div className="w-full max-w-[400px] relative h-[400px]">
+            <div className="md:hidden relative h-[45vh] flex items-center justify-center">
+              <div className="w-full max-w-[400px] relative h-[35vh]">
                 {/* 移动端第一张图片 */}
                 <div className="absolute inset-0 w-full aspect-[4/3] bg-gradient-to-br from-gray-50 to-white p-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)] transform -rotate-3 hover:scale-[1.02] transition-transform duration-300 rounded-2xl">
                   <div className="w-full h-full overflow-hidden rounded-xl">

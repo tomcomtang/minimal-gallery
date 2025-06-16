@@ -145,7 +145,7 @@ export default function AlbumContent({ albumData, category }: AlbumContentProps)
           </div>
 
           {/* Photos grid */}
-          <div className="max-w-6xl mx-auto h-[calc(100vh-400px)]">
+          <div className="max-w-6xl mx-auto">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentLayout}
@@ -153,7 +153,7 @@ export default function AlbumContent({ albumData, category }: AlbumContentProps)
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.3 }}
-                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-full"
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
               >
                 {getCurrentLayoutPhotos().map((photo, index) => (
                   <motion.div
@@ -177,7 +177,7 @@ export default function AlbumContent({ albumData, category }: AlbumContentProps)
           </div>
 
           {/* Pagination controls */}
-          <div className="max-w-6xl mx-auto mt-2 flex justify-center items-center gap-4">
+          <div className="max-w-6xl mx-auto mt-4 mb-4 flex justify-center items-center gap-4">
             <button
               onClick={() => handleLayoutChange('prev')}
               className="p-2 rounded-full hover:bg-gray-100 transition-colors disabled:opacity-50"
