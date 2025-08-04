@@ -6,7 +6,7 @@ Nimmal Gallery is a modern image showcase website template built with Next.js. I
 
 You can quickly deploy to Tencent Cloud EdgeOne using the button below:
 
-[![Deploy to Tencent Cloud](https://img.shields.io/badge/Deploy%20to-Tencent%20Cloud-blue)](https://edgeone.ai/pages/new?template=https://github.com/tomcomtang/nimmal-gallery&output-directory=./out&build-command=npm%20run%20build&install-command=npm%20install)
+[![Deploy to Tencent Cloud](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=https://github.com/tomcomtang/nimmal-gallery&output-directory=./out&build-command=npm%20run%20build&install-command=npm%20install)
 
 ## Live Demo
 
