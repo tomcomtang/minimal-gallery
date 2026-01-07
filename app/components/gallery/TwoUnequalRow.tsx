@@ -24,7 +24,7 @@ export default function TwoUnequalRow({ albums, onAlbumClick }: TwoUnequalRowPro
                     src={album.coverImage}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  {/* 标签组 */}
+                  {/* Label group */}
                   <div className="absolute top-4 right-4 flex gap-2">
                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
                       <span className="text-sm font-medium text-gray-700">

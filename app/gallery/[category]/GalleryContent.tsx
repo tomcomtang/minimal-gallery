@@ -27,13 +27,13 @@ interface GalleryContentProps {
   };
 }
 
-// 定义布局类型
+// Define layout type
 type LayoutType = 'three' | 'mixed' | 'twoEqual' | 'twoUnequal';
 
-// 定义每个布局类型需要的照片数量
+// Define the number of photos required for each layout type
 const LAYOUT_PHOTO_COUNTS: Record<LayoutType, number> = {
   three: 3,
-  mixed: 3, // 1个主图 + 2个侧边图
+  mixed: 3, // 1 main image + 2 side images
   twoEqual: 2,
   twoUnequal: 2
 };
@@ -48,27 +48,27 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentLayout, setCurrentLayout] = useState<'staggered' | 'center' | 'symmetric'>('staggered')
   
-  // 从配置中获取相册数据
+  // Get album data from config
   const albums = useMemo(() => {
     const albums = getAlbumsByCategory(category)
     return albums;
   }, [category])
 
-  // 生成随机布局
+  // Generate random layouts
   const layouts = useMemo(() => {
     const availableLayouts: LayoutType[] = ['three', 'mixed', 'twoEqual', 'twoUnequal'];
     const result: LayoutType[] = [];
-    let remainingAlbums = albums.length - 2; // 减去第一行的两张照片
+    let remainingAlbums = albums.length - 2; // Subtract the first row's two photos
 
     while (remainingAlbums > 0) {
-      // 过滤出当前可用的布局类型
+      // Filter out currently available layout types
       const possibleLayouts = availableLayouts.filter(layout => 
         LAYOUT_PHOTO_COUNTS[layout] <= remainingAlbums
       );
 
       if (possibleLayouts.length === 0) break;
 
-      // 随机选择一个布局
+      // Randomly select a layout
       const randomLayout = possibleLayouts[Math.floor(Math.random() * possibleLayouts.length)];
       result.push(randomLayout);
       remainingAlbums -= LAYOUT_PHOTO_COUNTS[randomLayout];
@@ -105,9 +105,9 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
     setCurrentGalleryInfo(nextAlbum)
   }
 
-  // 计算每个布局的起始索引
+  // Calculate the start index for each layout
   const getLayoutStartIndex = (layoutIndex: number) => {
-    let startIndex = 2; // 从第三张照片开始（前两张用于第一行）
+    let startIndex = 2; // Start from the third photo (first two photos are used for the first row)
     for (let i = 0; i < layoutIndex; i++) {
       startIndex += LAYOUT_PHOTO_COUNTS[layouts[i]];
     }

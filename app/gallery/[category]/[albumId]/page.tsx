@@ -1,7 +1,7 @@
 import { getCategoryInfo, getAlbumsByCategory, getAlbumById, getAllCategories } from '@/app/utils/config'
 import AlbumContent from './AlbumContent'
 
-// 生成静态参数
+// Generate static params
 export async function generateStaticParams() {
   const categories = getAllCategories()
   const paths = []

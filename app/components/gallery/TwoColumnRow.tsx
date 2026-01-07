@@ -28,7 +28,7 @@ export default function TwoColumnRow({ albums, onAlbumClick, info, hideFirstPhot
                   src={album.coverImage}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                {/* 标签组 - 第一个相册且hideFirstPhotoLabels为true时不显示照片数和时间标签 */}
+                {/* Label group - Don't show photo count and time labels when it's the first album and hideFirstPhotoLabels is true */}
                 {!(index === 0 && hideFirstPhotoLabels) && (
                   <div className="absolute top-4 right-4 flex gap-2">
                     <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm">
